@@ -15,7 +15,7 @@ ifdef T_A
 	cscript configure.js compiler=msvc prefix=$(NTOP) \
 		include=$(subst /,\,$(LIBICONV))\include;$(subst /,\,$(ZLIB))\include;$(subst /,\,$(EPICS_BASE))\include \
 		lib=$(subst /,\,$(LIBICONV))\lib\$(EPICS_HOST_ARCH);$(subst /,\,$(ZLIB))\lib\$(EPICS_HOST_ARCH) \
-		debug=$(CDEBUG) zlib=$(USE_ZLIB) cruntime=$(CRUNTIME) bindir=$(NTOP)\bin\$(EPICS_HOST_ARCH) \
+		debug=$(CDEBUG) zlib=$(USE_ZLIB) cruntime="$(CRUNTIME)" bindir=$(NTOP)\bin\$(EPICS_HOST_ARCH) \
 		incdir=$(NTOP)\include libdir=$(NTOP)\lib\$(EPICS_HOST_ARCH) sodir=$(NTOP)\bin\$(EPICS_HOST_ARCH)
 	@echo Configure done
 	run_nmake.bat /f Makefile.msvc

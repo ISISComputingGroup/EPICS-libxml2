@@ -7,14 +7,14 @@ include $(TOP)/configure/CONFIG
 ifneq ($(findstring debug,$(EPICS_HOST_ARCH)),)
 CDEBUG=yes
 ifeq ($(STATIC_BUILD),YES)
-CRUNTIME=/MTd
+CRUNTIME=/MTd /DEPICS_DLL_NO
 else
 CRUNTIME=/MDd
 endif
 else
 CDEBUG=no
 ifeq ($(STATIC_BUILD),YES)
-CRUNTIME=/MT
+CRUNTIME=/MT /DEPICS_DLL_NO
 else
 CRUNTIME=/MD
 endif
@@ -25,7 +25,7 @@ include $(TOP)/configure/RULES
 
 ifdef T_A
 install:
-	$(MAKE) -C $(TOP)/libxml2-2.9.2/win32 -f Makefile.epics install T_A=$(T_A) CDEBUG=$(CDEBUG) CRUNTIME=$(CRUNTIME) USE_ZLIB=$(USE_ZLIB) TOP=$(LIBXML2)
+	$(MAKE) -C $(TOP)/libxml2-2.9.2/win32 -f Makefile.epics install T_A=$(T_A) CDEBUG=$(CDEBUG) CRUNTIME="$(CRUNTIME)" USE_ZLIB=$(USE_ZLIB) TOP=$(LIBXML2)
 endif
 
 clean::
