@@ -50,7 +50,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * extra version information, used to show a CVS compilation
  */
-#define LIBXML_VERSION_EXTRA "-GITv2.9.2-rc2-10-gbe2a7ed"
+#define LIBXML_VERSION_EXTRA ""
 
 /**
  * LIBXML_TEST_VERSION:
@@ -291,7 +291,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether ISO-8859-* support is made available in case iconv is not
  */
-#if 1
+#if 0
 #define LIBXML_ISO8859X_ENABLED
 #endif
 
@@ -388,7 +388,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * the string suffix used by dynamic modules (usually shared libraries)
  */
-#define LIBXML_MODULE_EXTENSION ".so" 
+#define LIBXML_MODULE_EXTENSION ".dll" 
 #endif
 
 /**
@@ -405,7 +405,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether the Lzma support is compiled in
  */
-#if 1
+#if 0
 #define LIBXML_LZMA_ENABLED
 #endif
 
