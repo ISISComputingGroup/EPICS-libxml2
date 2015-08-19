@@ -9,3 +9,5 @@ envPaths
 cdCommands
 dllPath.bat
 runIoc.bat
+/libxml2-2.9.2/config.h
+/libxml2-2.9.2/win32/config.msvc
