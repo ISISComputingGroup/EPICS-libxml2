@@ -8,7 +8,9 @@ O.*/
 envPaths
 cdCommands
 dllPath.bat
-runIoc.bat
+runIOC.bat
+runIOC.sh
+relPaths.sh
 /libxml2-2.9.2/config.h
 /libxml2-2.9.2/win32/config.msvc
 /libxml2-2.9.2/win32/Makefile
