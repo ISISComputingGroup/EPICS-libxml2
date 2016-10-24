@@ -19,3 +19,4 @@ relPaths.sh
 /libxml2-2.9.2/win32/int.a.msvc/
 /libxml2-2.9.2/win32/int.msvc/
 /libxml2-2.9.2/win32/int.utils.msvc/
+.project
