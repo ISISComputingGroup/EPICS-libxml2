@@ -26,6 +26,9 @@ include $(TOP)/configure/RULES
 ifdef T_A
 install:
 	$(MAKE) -C $(TOP)/libxml2-2.9.2/win32 -f Makefile.epics install T_A=$(T_A) CDEBUG=$(CDEBUG) CRUNTIME="$(CRUNTIME)" USE_ZLIB=$(USE_ZLIB) TOP=$(LIBXML2)
+ifeq ($(OS_CLASS),WIN32)
+	$(CP) $(TOP)/lib/$(T_A)/libxml2.lib $(TOP)/lib/$(T_A)/xml2.lib
+endif
 endif
 
 clean::
