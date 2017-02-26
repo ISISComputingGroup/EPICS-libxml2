@@ -14,9 +14,9 @@ relPaths.sh
 /libxml2-2.9.2/config.h
 /libxml2-2.9.2/win32/config.msvc
 /libxml2-2.9.2/win32/Makefile
-/libxml2-2.9.2/win32/bin.msvc/
-/libxml2-2.9.2/win32/int.a.dll.msvc/
-/libxml2-2.9.2/win32/int.a.msvc/
-/libxml2-2.9.2/win32/int.msvc/
-/libxml2-2.9.2/win32/int.utils.msvc/
+/libxml2-2.9.2/win32/bin.msvc*/
+/libxml2-2.9.2/win32/int.a.dll.msvc*/
+/libxml2-2.9.2/win32/int.a.msvc*/
+/libxml2-2.9.2/win32/int.msvc*/
+/libxml2-2.9.2/win32/int.utils.msvc*/
 .project

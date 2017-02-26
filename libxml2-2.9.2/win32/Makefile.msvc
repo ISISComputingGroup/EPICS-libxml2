@@ -28,11 +28,11 @@ XML_A = $(XML_BASENAME)_a.lib
 XML_A_DLL = $(XML_BASENAME)_a_dll.lib
 
 # Place where we let the compiler put its output.
-BINDIR = bin.msvc
-XML_INTDIR = int.msvc
-XML_INTDIR_A = int.a.msvc
-XML_INTDIR_A_DLL = int.a.dll.msvc
-UTILS_INTDIR = int.utils.msvc
+BINDIR = bin.msvc.$(EPICS_HOST_ARCH)
+XML_INTDIR = int.msvc.$(EPICS_HOST_ARCH)
+XML_INTDIR_A = int.a.msvc.$(EPICS_HOST_ARCH)
+XML_INTDIR_A_DLL = int.a.dll.msvc.$(EPICS_HOST_ARCH)
+UTILS_INTDIR = int.utils.msvc.$(EPICS_HOST_ARCH)
 
 # The preprocessor and its options.
 CPP = cl.exe /EP
