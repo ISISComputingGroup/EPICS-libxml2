@@ -9,14 +9,14 @@ CDEBUG=yes
 ifeq ($(STATIC_BUILD),YES)
 CRUNTIME=/MTd /DEPICS_DLL_NO
 else
-CRUNTIME=/MDd
+CRUNTIME=/MDd /DEPICS_BUILD_DLL 
 endif
 else
 CDEBUG=no
 ifeq ($(STATIC_BUILD),YES)
 CRUNTIME=/MT /DEPICS_DLL_NO
 else
-CRUNTIME=/MD
+CRUNTIME=/MD /DEPICS_BUILD_DLL 
 endif
 endif
 USE_ZLIB=yes
@@ -31,7 +31,13 @@ ifeq ($(OS_CLASS),WIN32)
 endif
 endif
 
-clean::
+ifeq ($(BASE_3_14),YES)
+clean:: myclean
+else
+clean: myclean
+endif
+
+myclean:
 	$(MAKE) -C $(TOP)/libxml2-2.9.2/win32 -f Makefile.epics clean
 
 uninstall:
