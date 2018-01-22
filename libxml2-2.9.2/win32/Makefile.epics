@@ -19,6 +19,7 @@ ifdef T_A
 		incdir=$(NTOP)\include libdir=$(NTOP)\lib\$(EPICS_HOST_ARCH) sodir=$(NTOP)\bin\$(EPICS_HOST_ARCH)
 	run_nmake.bat /f Makefile.msvc
 	run_nmake.bat /f Makefile.msvc install
+	$(CP) ../include/win32config.h $(NTOP)/include/libxml2
 endif
 
 ifeq ($(BASE_3_14),YES)
