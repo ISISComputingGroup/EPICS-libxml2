@@ -16,7 +16,8 @@ ifdef T_A
 		include=$(subst /,\,$(LIBICONV))\include;$(subst /,\,$(ZLIB))\include;$(subst /,\,$(EPICS_BASE))\include \
 		lib=$(subst /,\,$(LIBICONV))\lib\$(EPICS_HOST_ARCH);$(subst /,\,$(ZLIB))\lib\$(EPICS_HOST_ARCH) \
 		debug=$(CDEBUG) zlib=$(USE_ZLIB) cruntime="$(CRUNTIME)" bindir=$(NTOP)\bin\$(EPICS_HOST_ARCH) \
-		incdir=$(NTOP)\include libdir=$(NTOP)\lib\$(EPICS_HOST_ARCH) sodir=$(NTOP)\bin\$(EPICS_HOST_ARCH)
+		incdir=$(NTOP)\include libdir=$(NTOP)\lib\$(EPICS_HOST_ARCH) sodir=$(NTOP)\bin\$(EPICS_HOST_ARCH) \
+		static=$(CSTATIC) iconv=$(USE_ICONV)
 	run_nmake.bat /f Makefile.msvc
 	run_nmake.bat /f Makefile.msvc install
 	$(CP) ../include/win32config.h $(NTOP)/include/libxml2
