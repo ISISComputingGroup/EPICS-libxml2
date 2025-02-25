@@ -34,7 +34,6 @@ install:
 ifeq ($(OS_CLASS),WIN32)
 ifeq ($(STATIC_BUILD),YES)
 	$(CP) $(TOP)/lib/$(T_A)/libxml2_a.lib $(TOP)/lib/$(T_A)/xml2.lib
-	$(CP) $(TOP)/lib/$(T_A)/libxml2_a.lib $(TOP)/lib/$(T_A)/libxml2.lib
 else
 	$(CP) $(TOP)/lib/$(T_A)/libxml2.lib $(TOP)/lib/$(T_A)/xml2.lib
 endif
